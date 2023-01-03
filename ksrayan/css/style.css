@@ -1,0 +1,439 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'NRT Reg';
+  }
+  @font-face {
+      font-family: "NRT_Reg";
+      src: url("NRT-Reg.ttf");
+      /* IE9 Compat Modes */
+  
+  }
+  body{
+    background:#f8f5fe;
+  }
+.login-form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    height: 100vh;
+    align-items: center;
+}
+.login-form .logo{
+    position: absolute;
+    top: 1rem;
+    left: 4rem;
+}
+.login-form .logo img{
+    width: 100px;
+}
+
+.login-form form{
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+.login-form form p{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #6600cc;
+    font-size: 1.5rem;
+}
+.login-form form img{
+    width: 200px;
+    margin: 15px 0 15px 0;
+}
+.login-form form .container{
+    display: flex;
+    flex-direction: row;
+    background: #ecf0f3;
+    border-radius: 5px;
+    margin: 0 0 15px 0;
+    padding: 5px 3px 5px 3px;
+    border: 1px solid black;
+}
+.login-form form .container:focus{
+    border:1px solid #2fb344;
+}
+.login-form form .container .icon{
+    width: 35px;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: #6600cc ;
+}
+.login-form form .container input{
+    width: 100%;
+    height: 35px;
+    background: none;
+    padding: 0 0 0 15px;
+    border: none;
+    outline: none;
+}
+
+.login-form form .btn{
+    width: 100%;
+    height: 45px;
+    border-radius: 6px;
+    margin: 10px 0 1px 0;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: #6600cc;
+    transition: all .4s;
+}
+.login-form form .btn:hover{
+    background: #7900f1;
+}
+.login-form form .login{
+    margin-top: 30px;
+}
+.login-form form  a{
+    color: #000;
+    text-decoration: none;
+}
+@media only screen and (max-width:600px) {
+.login-form form{
+    max-width: 90%;
+}
+}
+section{
+    width: 100%;
+}
+section .logo{
+    width: 100%;
+    text-align: center;
+}
+section .logo img{
+    width: 300px;
+    
+}
+section .cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section .cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 6px;
+    width: 300px;
+    height: 140px;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s;
+}
+section .cards .card:hover{
+    box-shadow: 26px 26px 30px rgb(255, 255, 255), -26px -26px 30px #cbced1;
+}
+section .cards .card i{
+    font-size: 3.5rem;
+    color: #75F;
+}
+section .cards .card a{
+    font-size: 1.1rem;
+    margin-top: 0.6rem;
+    transition: .4s;
+}
+section .cards .card a:hover{
+    color: #75F;
+    border: none;
+    background-color: none;
+}
+footer{
+    width: 100%;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    font-size: 1.5rem;
+}
+.sidebar{
+    position: fixed;
+    width: 240px;
+    left: -240px;
+    height: 100%;
+    background: #fff;
+    transition: all .5s ease;
+}
+.sidebar header{
+    font-size: 28px;
+    color: #fff;
+    line-height: 70px;
+    text-align: center;
+    background: #222;
+    user-select: none;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.sidebar a{
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: white;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-left: 5px solid transparent;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    transition: all .5s ease;
+}
+.sidebar a.active,a:hover{
+    border-left: 5px solid #7900f1;
+    color: #7900f1;
+}
+#logout{
+    border-left: 5px solid tomato;
+    color: tomato;
+}
+.sidebar a i{
+    font-size: 23px;
+    margin-right: 16px;
+}
+.sidebar a span{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#check{
+    display: none;
+}
+label #btn,label #cancel{ 
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #262626;
+    margin: 15px 30px;
+    font-size: 29px;
+    background: #262626;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: all .5s ease;
+}
+label #cancel{
+    opacity: 0;
+    visibility: hidden;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    margin-left: 245px;
+    opacity: 0;
+    visibility: hidden;
+}
+#check:checked ~ label #cancel{
+    margin-left: 245px;
+    opacity: 1;
+    visibility: visible;
+}
+@media (max-width : 860px) {
+    .sidebar{
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+    header,#btn,#cancel{
+        display: none;
+    }
+    span{
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .sidebar a{
+        height: 60px;
+    }
+    .sidebar a i{
+        margin-left: -10px;
+    }
+    a:hover{
+        width: 200px;
+        background: inherit;
+    }
+    .sidebar a:hover span{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.upload{
+    width: 100%;
+    margin-bottom: 60px;
+}
+.box-upload{
+    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.box-upload form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+.box-upload form input{
+    width: 90%;
+    margin: 10px;
+    height: 48px;
+    padding: 4px;
+    border: none;
+    background: rgba(0,0,0,0.30);
+    color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+}
+.box-upload form input::placeholder{
+    color: rgb(255,255,255);
+}
+textarea{
+    margin-top: 10px;
+    padding: 4px;
+    background: rgba(0,0,0,0.30);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    text-align: right;
+}
+.box-upload form button{
+    margin-top: 20px;
+    height: 48px;
+    width: 90%;
+    background: #7900f1;
+    color: #fff;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+
+.table{
+    width: 100%;
+}
+.table table{
+    width: 70%;
+   
+    margin: auto;
+}
+.table table thead{
+    color: #fff;
+    text-align: center;
+}
+.table table thead tr{
+    background: #7900f1;
+}
+.table table thead tr td{
+    padding: 6px;
+    border-radius: 6px;
+}
+.table table tbody{
+    background: #333;
+    color: #fff;
+}
+.table table tbody tr td{
+    padding: 6px;
+    text-align: center;
+    border-radius: 6px;
+}
+.table table tbody tr td input{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 1rem;
+    background: none;
+    color: #fff;
+    outline: none;
+    border: none;
+    transition: .4s;
+}
+.table table tbody tr td input:focus{
+    background: rgba(0,0,0,0.40);
+    border-radius: 6px;
+}
+.table table tbody tr td button{
+    height: 30px;
+    padding: 6px;
+    background: #7900f1;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .4s;
+}
+.table table tbody tr td button:hover{
+    background: #840aff;
+}
+
+.cards-comments{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cards-comments .card{
+    width: 20%;
+    background: #7900f1;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 6px;
+}
+.cards-comments .card .head{
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    /* box-shadow: 2px 2px 8px #fff , -2px -2px 4px #fff; */
+    text-align: right;
+}
+.cards-comments .card .head .name{
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+}
+.cards-comments .card .head .email{
+    color: rgba(255,255,255,0.50);
+}
+.cards-comments .card .comments{
+    text-align: right;
+    color: #fff;
+    padding: 10px;
+
+}
+hr{
+    background: rgba(255,255,255,0.50);
+    border: none;
+    height: 2px;
+}
